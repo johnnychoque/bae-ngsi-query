@@ -1,0 +1,48 @@
+{
+    "name": "NGSI-query",
+    "author": "jchoque",
+    "version": "0.1",
+    "module": "ngsi_query.NGSIQuery",
+    "media_types": ["application/json"],
+    "formats": ["URL"],
+    "overrides": [],
+    "pull_accounting": true,
+    "form_order": ["app_id", "role", "perm_name", "action", "resource", "is_regex"],
+    "form": {
+        "app_id": {
+            "type": "text",
+            "label": "Application ID",
+            "placeholder": "app_id",
+            "mandatory": true
+        },
+        "role": {
+            "type": "text",
+            "label": "Acquisition Role",
+            "placeholder": "customer",
+            "mandatory": true
+        },
+        "perm_name": {
+          "type": "text",
+          "label": "Permission Name",
+          "placeholder": "iot_sensors",
+          "mandatory": true
+        },
+        "action": {
+          "type": "text",
+          "label": "Action",
+          "placeholder": "GET",
+          "mandatory": true
+        },
+        "resource": {
+            "type": "text",
+            "label": "Resource",
+            "placeholder": "/v2/entities/",
+            "mandatory": true
+        },
+        "is_regex": {
+          "type": "checkbox",
+          "label": "Is regex?",
+          "default": true
+        }
+    }
+}
